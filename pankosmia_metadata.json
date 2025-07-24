@@ -1,0 +1,18 @@
+{
+  "id": "burrito-gourmet",
+  "require": {
+    "net": false,
+    "debug": true
+  },
+  "i18n": {
+    "title": {
+      "en": "Burrito Gourmet"
+    },
+    "summary": {
+      "en": "An utility for checking and fixing burritos"
+    },
+    "stub_content": {
+      "en": "Content goes here"
+    }
+  }
+}
