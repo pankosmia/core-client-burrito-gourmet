@@ -1,0 +1,12 @@
+# This is a Lexicon for the Pankosmia documentation
+# It contains bits of text that benefits from quick overall updates
+
+# To reference a lexicon variable, use: {{ site.data.lexicon.variable_name }}
+
+{
+  "app-name": "Pithekos",
+  "app-version": "",
+
+  "company-name": "Xenizo",
+  "company-website": "https://xenizo.fr/" # Linked on the homepage
+}
