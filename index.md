@@ -9,9 +9,10 @@ layout: default
 nav_order: 1
 title: Home
 ---
+
 # Burrito Gourmet - Pankosmia
 
-*A tasty addition to an ecosystem to build custom-made translation tools*
+_A tasty addition to an ecosystem to build custom-made translation tools_
 {: .fs-6 .fw-300 }
 
 Pankosmia is a Scripture translation software Ecosystem. It is used to build multiple
