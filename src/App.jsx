@@ -22,7 +22,7 @@ function App() {
     }, [handleWindowResize]);
 
     const getProjectSummaries = async () => {
-        const summariesResponse = await getJson("/burrito/metadata/summaries?org=_local_/_quarantine_", debugRef.current);
+        const summariesResponse = await getJson("/api/burrito/metadata/summaries?org=_local_/_quarantine_", debugRef.current);
         if (summariesResponse.ok) {
             setProjectSummaries(summariesResponse.json);
         }
@@ -36,7 +36,7 @@ function App() {
     );
 
     const getReport = async () => {
-        const reportResponse = await getJson(`/burrito/audit/_local_/_quarantine_/${selectedRepo.split('/')[2]}`, debugRef.current);
+        const reportResponse = await getJson(`/api/burrito/audit/_local_/_quarantine_/${selectedRepo.split('/')[2]}`, debugRef.current);
         if (reportResponse.ok) {
             setReport(reportResponse.json);
         }
