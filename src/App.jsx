@@ -1,6 +1,7 @@
 import {useContext, useState, useCallback, useEffect} from 'react';
 import {FormControl, FormControlLabel, FormLabel, Grid2, Radio, RadioGroup} from "@mui/material";
-import {getJson, debugContext, i18nContext, doI18n} from "pithekos-lib";
+import {getJson, doI18n} from "pithekos-lib";
+import { debugContext, i18nContext} from "pankosmia-rcl";
 
 
 function App() {
