@@ -7,7 +7,7 @@ import {
   Radio,
   RadioGroup,
 } from "@mui/material";
-import { getJson} from "pankosmia-lib/http";
+import { getJson } from "pankosmia-lib/http";
 import { doI18n } from "pankosmia-lib/i18n";
 import { debugContext, i18nContext } from "pankosmia-rcl";
 
@@ -33,11 +33,25 @@ function App() {
 
   const getProjectSummaries = async () => {
     const summariesResponse = await getJson(
-      "/burrito/metadata/summaries?org=_local_/_quarantine_",
+      "/api/burrito/metadata/summaries?org=_local_/_quarantine_",
       debugRef.current,
     );
     if (summariesResponse.ok) {
       setProjectSummaries(summariesResponse.json);
+    }
+  };
+
+  useEffect(() => {
+    getProjectSummaries().then();
+  }, []);
+
+  const getReport = async () => {
+    const reportResponse = await getJson(
+      `/api/burrito/audit/_local_/_quarantine_/${selectedRepo.split("/")[2]}`,
+      debugRef.current,
+    );
+    if (reportResponse.ok) {
+      setReport(reportResponse.json);
     }
   };
 
@@ -60,6 +74,7 @@ function App() {
       getReport().then();
     }
   }, [selectedRepo]);
+
   return (
     <Grid2 container spacing={2} sx={{ maxHeight: maxWindowHeight }}>
       <Grid2 size={12} item>
