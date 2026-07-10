@@ -7,7 +7,9 @@ import {
   Radio,
   RadioGroup,
 } from "@mui/material";
-import { getJson, debugContext, i18nContext, doI18n } from "pithekos-lib";
+import { getJson} from "pankosmia-lib/http";
+import { doI18n } from "pankosmia-lib/i18n";
+import { debugContext, i18nContext } from "pankosmia-rcl";
 
 function App() {
   const [maxWindowHeight, setMaxWindowHeight] = useState(
