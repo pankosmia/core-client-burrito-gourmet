@@ -1,5 +1,5 @@
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
+import { defineConfig } from "vite";
+import react from "@vitejs/plugin-react";
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -9,7 +9,7 @@ export default defineConfig({
     strictPort: true,
     host: true,
     cors: true,
-    origin: 'http://localhost:8000',
+    origin: "http://localhost:8000",
     proxy: {
       "/api": {
         target: "http://127.0.0.1:19119", // Backend server
@@ -18,9 +18,8 @@ export default defineConfig({
     },
   },
   build: {
-    outDir: 'build',
+    outDir: "build",
     emptyOutDir: true,
-    
   },
-  base: '/clients/core-client-burrito-gourmet/'
-})
+  base: "/clients/core-client-burrito-gourmet/",
+});

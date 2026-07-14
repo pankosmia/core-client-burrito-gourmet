@@ -1,15 +1,14 @@
-import {createRoot} from "react-dom/client";
-import {SpSpa} from "pankosmia-rcl";
+import { createRoot } from "react-dom/client";
+import { SpSpa } from "pankosmia-rcl";
 import App from "./App";
-import './index.css';
+import "./index.css";
 
-createRoot(document.getElementById("root"))
-    .render(
-        <SpSpa
-            requireNet={false}
-            titleKey="pages:burrito-gourmet:title"
-            currentId="core-client-burrito-gourmet"
-        >
-            <App/>
-        </SpSpa>
-    );
+createRoot(document.getElementById("root")).render(
+  <SpSpa
+    requireNet={false}
+    titleKey="pages:burrito-gourmet:title"
+    currentId="core-client-burrito-gourmet"
+  >
+    <App />
+  </SpSpa>,
+);
