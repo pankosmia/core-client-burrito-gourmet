@@ -47,20 +47,6 @@ function App() {
 
   const getReport = async () => {
     const reportResponse = await getJson(
-      `/api/burrito/audit/_local_/_quarantine_/${selectedRepo.split("/")[2]}`,
-      debugRef.current,
-    );
-    if (reportResponse.ok) {
-      setReport(reportResponse.json);
-    }
-  };
-
-  useEffect(() => {
-    getProjectSummaries().then();
-  }, []);
-
-  const getReport = async () => {
-    const reportResponse = await getJson(
       `/burrito/audit/_local_/_quarantine_/${selectedRepo.split("/")[2]}`,
       debugRef.current,
     );
